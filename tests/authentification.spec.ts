@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 test.describe('Authentication on the page', () => {
 
     test('Sign Up', async ({ page }) => {
-        await page.goto('https://demo.learnwebdriverio.com/');
+        await page.goto('/');
         await page.click('xpath=//a[contains(text(), "Sign up")]'); 
         await page.locator('xpath=//input[@placeholder="Username"]').fill('testuser');
         await page.locator('xpath=//input[@placeholder="Email"]').fill('testuser@example.com');
